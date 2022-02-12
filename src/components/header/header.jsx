@@ -8,7 +8,7 @@ function header() {
     <div>
          <header className="header">
         <div className="header__logo-box">
-          <img src={logo} alt="logo" className="header__logo" />
+          <img src={logo} alt="logo" />
         </div>
         <div className="header__text-box">
           <h1 className="heading-primary">

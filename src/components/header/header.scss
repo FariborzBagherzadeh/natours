@@ -1,10 +1,12 @@
-@use '../../index.scss' as v;
+@import "../../index.scss";
+@import "../../App.scss";
+
 .header {
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba(v.$color-primary-light, 0.8),
-      rgba(v.$color-primary-dark, 0.8)
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
     ),
     url(../../img/hero.jpg);
   background-size: cover;
@@ -12,16 +14,17 @@
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 
-  .header__logo-box {
+  &__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 
-    .header__logo {
+    img {
       height: 3.5rem;
     }
   }
-  .header__text-box {
+
+  &__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -29,113 +32,74 @@
     text-align: center;
 
     .heading-primary {
-      color: #fff;
+      color: $color-white;
       text-transform: uppercase;
       backface-visibility: hidden;
       margin-bottom: 6rem;
+      &-main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation: moveInLeft 1.2s ease-out;
+      }
+      &-sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.74rem;
+        animation: moveInRight 1.2s ease-out;
+      }
     }
+    .btn {
+      &:link,
+      &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all 0.2s;
+        position: relative;
+        font-size: 1.6rem;
+      }
+      &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 10px 20px rgba($color-black, 0.2);
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+      }
+      &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+      }
+      &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        letter-spacing: 0.1rem;
+        &::after {
+          background-color: $color-white;
+        }
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+        opacity: 1;
+      }
 
-    .heading-primary-main {
-      display: block;
-      font-size: 6rem;
-      font-weight: 400;
-      letter-spacing: 3.5rem;
-      animation: moveInLeft 1.2s ease-out;
-    }
-    .heading-primary-sub {
-      display: block;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: 1.74rem;
-      animation: moveInRight 1.2s ease-out;
-    }
-    .btn:link,
-    .btn:visited {
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 1.5rem 4rem;
-      display: inline-block;
-      border-radius: 10rem;
-      transition: all 0.2s;
-      position: relative;
-      font-size: 1.6rem;
-    }
-    .btn:hover {
-      transform: translateY(-0.3rem);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-    .btn:active {
-      transform: translateY(-0.1rem);
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    }
-    .btn--white {
-      background-color: #fff;
-      color: #777;
-      letter-spacing: 0.1rem;
-    }
-
-    .btn::after {
-      content: "";
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      border-radius: 10rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: all 0.4s;
-      opacity: 1;
-    }
-    .btn--white::after {
-      background-color: #fff;
-    }
-    .btn:hover::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
-    }
-    .btn--animated {
-      animation: moveInBottom 1s ease-in-out 0.2s backwards;
-    }
-  }
-  @keyframes moveInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-10rem);
-    }
-    80% {
-      transform: translateX(1rem);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(0);
-    }
-  }
-
-  @keyframes moveInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(10rem);
-    }
-    80% {
-      transform: translateX(-1rem);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(0);
-    }
-  }
-  @keyframes moveInBottom {
-    0% {
-      opacity: 0;
-      transform: translateY(10rem);
-    }
-    80% {
-      transform: translateY(-1rem);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(0);
+      &--animated {
+        animation: moveInBottom 1s ease-in-out 0.2s backwards;
+      }
     }
   }
 }
