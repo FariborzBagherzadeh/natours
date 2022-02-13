@@ -1,3 +1,5 @@
+@import "./index.scss";
+
 //Animations Start
 @keyframes moveInLeft {
   0% {
@@ -37,6 +39,18 @@
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+@keyframes colorTransforming {
+  0% {
+  
+    background: rgba(#196dea, $alpha: 1)
+  }
+
+  100% {
+  
+    background: rgba(#b22cff , $alpha: 1);
+
   }
 }
 

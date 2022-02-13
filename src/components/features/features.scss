@@ -1,0 +1,52 @@
+@import "../../index.scss";
+@import "../../index.scss";
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../../img/nat-4.jpg);
+  background-size: cover;
+  margin-top: -10rem;
+  & > * {
+    transform: skewY(7deg);
+  }
+  transform: skewY(-7deg);
+  &-grid {
+    padding: 0 2rem;
+    justify-content: space-around;
+    text-align: center;
+
+    .features-box {
+      max-width: 25rem;
+      margin-bottom: 2rem;
+      background-color: rgba($color-white, $alpha: 0.8);
+      font-size: 1.5rem;
+      padding: 1rem 1rem 5rem 1rem;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.3);
+      transition: all 0.3s;
+
+      &:hover {
+        transform: translate3d(0%, -10%, 0);
+        box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.6);
+      }
+      &__icon {
+        font-size: 6rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        background-image: linear-gradient(
+          to right,
+          $color-primary-light,
+          $color-primary-dark
+        );
+        background-clip: inherit;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}

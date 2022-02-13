@@ -16,7 +16,7 @@ function about() {
         </h2>
       </div>
       <Grid
-        className="section-about-grid"
+        className="section-about-grid u-center-text"
         container
         columnSpacing={12}
         rowSpacing={12}
