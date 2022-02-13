@@ -1,5 +1,10 @@
 import React from "react";
 import { Grid } from "@mui/material";
+
+import photo1 from "../../img/nat-1-large.jpg";
+import photo2 from "../../img/nat-2-large.jpg";
+import photo3 from "../../img/nat-3-large.jpg";
+
 import "./about.scss";
 
 function about() {
@@ -11,7 +16,6 @@ function about() {
         </h2>
       </div>
       <Grid
-      
         className="section-about-grid"
         container
         columnSpacing={12}
@@ -39,7 +43,23 @@ function about() {
           </a>
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-          Text1
+          <div className="composition">
+            <img
+              src={photo1}
+              alt="1"
+              className="composition__photo composition__photo--p1"
+            />
+            <img
+              src={photo2}
+              alt="2"
+              className="composition__photo composition__photo--p2"
+            />
+            <img
+              src={photo3}
+              alt="3"
+              className="composition__photo composition__photo--p3"
+            />
+          </div>
         </Grid>
       </Grid>
     </section>

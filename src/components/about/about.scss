@@ -32,7 +32,7 @@
   }
   .section-about-grid {
     max-width: 130rem;
-    margin: 0 auto;
+   margin: 0 auto;
     .u-margin-bottom-small {
       margin-bottom: 1.5rem;
     }
@@ -70,9 +70,42 @@
         transform: translate(-2px);
       }
       &:active {
-        box-shadow: 0 .5rem 1rem rgba($color: #000000, $alpha: 0.15);
+        box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.15);
         transform: translate(0);
+      }
+    }
+    .composition {
+      position: relative;
+      transition: all 0.5s;
+      &:hover .composition__photo:not(:hover) {
+        transform: scale(0.95);
+        filter: blur(0.15rem);
+      }
+      &__photo {
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.4);
+        position: absolute;
+        transition: all 0.3s;
+        outline-offset: 2rem;
+        &:hover {
+          transform: scale(1.05) translateY(-0.8rem);
+          box-shadow: 0 2.5rem 4rem rgba($color: #000000, $alpha: 0.5);
+          z-index: 20;
+          outline: 1.5rem solid $color-primary;
+        }
 
+        &--p1 {
+          left: 0;
+          top: -2rem;
+        }
+        &--p2 {
+          right: 0;
+          top: 2rem;
+        }
+        &--p3 {
+          left: 20%;
+          top: 10rem;
+        }
       }
     }
   }
