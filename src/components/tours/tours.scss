@@ -1,0 +1,212 @@
+@import "../../index.scss";
+
+.section-tours {
+  background-color: $color-grey-light-1;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem;
+  &__grid {
+    padding: 0 2rem;
+    justify-content: center;
+    align-items: center;
+    &-container {
+      padding: 2rem 0 0 0;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      .card-hover-1 {
+        &:hover {
+          transform: rotateY(180deg) perspective(180rem);
+          background-image: linear-gradient(
+            to right bottom,
+            $color-secondary-light,
+            $color-secondary-dark
+          );
+
+          .section-tours__grid-card__side--back {
+            color: $color-white;
+            opacity: 1;
+          }
+          .section-tours__grid-card__side--front {
+            opacity: 0;
+            transform: rotateY(180deg);
+            
+          }
+        }
+      }
+      .card-hover-2 {
+        &:hover {
+          transform: rotateY(180deg);
+          background-image: linear-gradient(
+            to right bottom,
+            $color-primary-light,
+            $color-primary-dark
+          );
+
+          .section-tours__grid-card__side--back {
+            color: $color-white;
+            opacity: 1;
+          }
+          .section-tours__grid-card__side--front {
+            opacity: 0;
+            transform: rotateY(180deg);
+          }
+        }
+      }
+      .card-hover-3 {
+        &:hover {
+          transform: rotateY(180deg);
+          background-image: linear-gradient(
+            to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark
+          );
+
+          .section-tours__grid-card__side--back {
+            color: $color-white;
+            opacity: 1;
+          }
+          .section-tours__grid-card__side--front {
+            opacity: 0;
+            transform: rotateY(180deg);
+          }
+        }
+      }
+    }
+    &-card {
+      height: 60rem;
+      max-width: 40rem;
+      perspective: 1500rem;
+      display: inline-block;
+      color: $color-white;
+      transition: all 1s;
+      border-radius: 3px;
+      margin-bottom: 2rem;
+      padding: 0rem 0rem 5rem 0rem;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.15);
+      &__side {
+        position: relative;
+        transition: all 1s;
+        width: 40rem !important;
+      }
+      &__side--front {
+        opacity: 1;
+
+        color: rgba($color: $color-black, $alpha: 1);
+        .card__picture {
+          background-size: cover;
+          height: 25rem;
+          background-blend-mode: screen;
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+          &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-secondary-light,
+                $color-secondary-dark
+              ),
+              url(../../img/nat-5.jpg);
+          }
+          &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-primary-light,
+                $color-primary-dark
+              ),
+              url(../../img/nat-6.jpg);
+          }
+          &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-tertiary-light,
+                $color-tertiary-dark
+              ),
+              url(../../img/nat-7.jpg);
+          }
+        }
+        .card__heading {
+          font-size: 2.8rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-align: right;
+          color: $color-white;
+          position: absolute;
+          top: 12rem;
+          right: 2rem;
+          width: 70%;
+          &-span {
+            padding: 1rem 1.8rem;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            &--1 {
+              background: linear-gradient(
+                to right bottom,
+                rgba($color-secondary-light, 0.95),
+                rgba($color-secondary-dark, 0.95)
+              );
+            }
+            &--2 {
+              background: linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, 0.95),
+                rgba($color-primary-dark, 0.95)
+              );
+            }
+            &--3 {
+              background: linear-gradient(
+                to right bottom,
+                rgba($color-tertiary-light, 0.95),
+                rgba($color-tertiary-dark, 0.95)
+              );
+            }
+          }
+        }
+        .card__details {
+          ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+          }
+          li {
+            font-weight: 300;
+            font-size: 1.7rem;
+            text-align: center;
+            padding: 1.5rem;
+            &:not(:last-child) {
+              border-bottom: 1px solid #eee;
+            }
+          }
+        }
+      }
+      &__side--back {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(128, 0, 128, 0);
+        transform: rotateY(180deg);
+        transition: all 1s;
+        color: rgba($color: #000000, $alpha: 0);
+        opacity: 0;
+        .card__cta {
+          margin-top: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .card__price {
+            &-only {
+              font-size: 2.4rem;
+              text-transform: uppercase;
+            }
+            &-value {
+              font-size: 6rem;
+              font-weight: 100;
+              margin-bottom: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

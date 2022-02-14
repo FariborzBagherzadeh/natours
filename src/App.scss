@@ -55,3 +55,116 @@
 }
 
 //Animations End
+
+// Headers Start
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  &-main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1.2s ease-out;
+  }
+  &-sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 1.2s ease-out;
+  }
+}
+.u-center-text {
+  text-align: center;
+
+  .heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 2px;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    background-clip: inherit;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: skewX(2deg) skewY(5deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($color: #000000, $alpha: 0.2);
+    }
+  }
+}
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+  }
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 10px 20px rgba($color-black, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+    letter-spacing: 0.1rem;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    opacity: 1;
+  }
+
+  &--animated {
+    animation: moveInBottom 1s ease-in-out 0.2s backwards;
+  }
+}
+// Header End
+
+
