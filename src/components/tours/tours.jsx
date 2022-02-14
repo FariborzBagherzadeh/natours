@@ -125,6 +125,13 @@ function tours() {
             </div>
           </div>
         </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}  >
+        <div className="u-center-text u-margin-top-huge" style={{marginTop:'15rem'}}>
+            <a href="#home" className="btn-text">
+              Discover all Toures
+            </a>
+          </div>
+        </Grid>
       </Grid>
     </section>
   );

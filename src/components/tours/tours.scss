@@ -2,7 +2,7 @@
 
 .section-tours {
   background-color: $color-grey-light-1;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 20rem 0;
   margin-top: -10rem;
   &__grid {
     padding: 0 2rem;
@@ -207,6 +207,16 @@
           }
         }
       }
+    }
+  }
+  .btn-text{
+   
+    animation: none;
+    color: $color-secondary-dark;
+    border-color: $color-secondary-light;
+    &:hover {
+      background-color: $color-secondary-dark;
+      color: #eee;
     }
   }
 }
