@@ -6,7 +6,7 @@
   margin-top: -10rem;
   &__grid {
     padding: 0 2rem;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     &-container {
       padding: 2rem 0 0 0;
@@ -29,7 +29,7 @@
           .section-tours__grid-card__side--front {
             opacity: 0;
             transform: rotateY(180deg);
-            
+            visibility: hidden;
           }
         }
       }
@@ -49,6 +49,7 @@
           .section-tours__grid-card__side--front {
             opacity: 0;
             transform: rotateY(180deg);
+            visibility: hidden;
           }
         }
       }
@@ -68,13 +69,14 @@
           .section-tours__grid-card__side--front {
             opacity: 0;
             transform: rotateY(180deg);
+            visibility: hidden;
           }
         }
       }
     }
     &-card {
-      height: 60rem;
-      max-width: 40rem;
+      height: 100%;
+      width: 35rem;
       perspective: 1500rem;
       display: inline-block;
       color: $color-white;
@@ -88,7 +90,7 @@
       &__side {
         position: relative;
         transition: all 1s;
-        width: 40rem !important;
+        width: 35rem !important;
       }
       &__side--front {
         opacity: 1;
@@ -127,7 +129,7 @@
           }
         }
         .card__heading {
-          font-size: 2.8rem;
+          font-size: 2rem;
           font-weight: 500;
           text-transform: uppercase;
           text-align: right;
@@ -135,7 +137,7 @@
           position: absolute;
           top: 12rem;
           right: 2rem;
-          width: 70%;
+          width: 50%;
           &-span {
             padding: 1rem 1.8rem;
             -webkit-box-decoration-break: clone;
@@ -171,7 +173,7 @@
           }
           li {
             font-weight: 300;
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             text-align: center;
             padding: 1.5rem;
             &:not(:last-child) {
@@ -209,8 +211,7 @@
       }
     }
   }
-  .btn-text{
-   
+  .btn-text {
     animation: none;
     color: $color-secondary-dark;
     border-color: $color-secondary-light;

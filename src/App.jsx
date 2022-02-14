@@ -7,6 +7,8 @@ import About from "./components/about/about";
 import Features from "./components/features/features";
 import Tours from "./components/tours/tours";
 import Stories from "./components/stories/stories";
+import Booking from "./components/booking/booking";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
      <Features/>
      <Tours/>
      <Stories/>
+     <Booking/>
+     <Footer/>
     </div>
   );
 }

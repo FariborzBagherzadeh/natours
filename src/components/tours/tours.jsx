@@ -9,7 +9,7 @@ function tours() {
       <div className="u-center-text u-margin-bottom-big">
         <h2 className="heading-secondary">Most popular tours</h2>
       </div>
-      <Grid container className="section-tours__grid" justifyContent={"center"}>
+      <Grid container className="section-tours__grid"  >
         <Grid
           className="section-tours__grid-container"
           item
