@@ -11,13 +11,13 @@ import { Grid } from "@mui/material";
 function stories() {
   return (
     <section className="section-stories">
-        <div className="bg-video">
-            <video className="bg-content" autoPlay muted loop >
-                <source src={video1} type="video/mp4" />
-                <source src={video2} type="video/webm" />
-                your browser is not supported
-            </video>
-        </div>
+      <div className="bg-video">
+        <video className="bg-content" autoPlay muted loop>
+          <source src={video1} type="video/mp4" />
+          <source src={video2} type="video/webm" />
+          your browser is not supported
+        </video>
+      </div>
       <div className="u-center-text u-margin-bottom-big">
         <h2 className="heading-secondary">we make people genuinely happy</h2>
       </div>
@@ -36,22 +36,25 @@ function stories() {
           xl={12}
           className="section-stories__container-item"
         >
+          <Grid item sm={12} xs={12} md={12} lg={12} xl={12}></Grid>
           <div className="story">
             <figure className="story__shape">
               <img src={person1} alt="person" />
               <figcaption> Mary Smith</figcaption>
             </figure>
-            <div className="story__text">
-              <h3 className="heading-tertiary u-margin-bottom-small">
-                I had the best week ever with my family
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                corporis amet blanditiis aperiam, sed suscipit qui accusantium
-                odit impedit nulla ipsum rerum sequi, consequatur alias officia
-                sint, accusamus quas magni.
-              </p>
-            </div>
+            <Grid item sm={12} xs={12} md={12} lg={12} xl={12}>
+              <div className="story__text">
+                <h3 className="heading-tertiary u-margin-bottom-small">
+                  I had the best week ever with my family
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                  corporis amet blanditiis aperiam, sed suscipit qui accusantium
+                  odit impedit nulla ipsum rerum sequi, consequatur alias
+                  officia sint, accusamus quas magni.
+                </p>
+              </div>
+            </Grid>
           </div>
         </Grid>
         <Grid

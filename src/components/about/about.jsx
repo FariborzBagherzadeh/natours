@@ -14,12 +14,14 @@ function about() {
         <h2 className="heading-secondary">
           Exciting tour for adveturous people
         </h2>
+ 
       </div>
+      <br /><br />
       <Grid
         className="section-about-grid u-center-text"
         container
-        columnSpacing={12}
-        rowSpacing={12}
+        columnSpacing={6}
+        rowSpacing={4}
       >
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
           <h3 className="heading-tertiary u-margin-bottom-small">

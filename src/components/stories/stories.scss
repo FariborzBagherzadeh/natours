@@ -9,15 +9,22 @@
       padding-bottom: 10rem;
     }
     .story {
-     
       font-size: 2rem;
-      width: 85%;
+      max-width: 80rem;
       margin: 0 auto;
       box-shadow: 0 3rem 6rem rgba($color: #000000, $alpha: 0.5);
-      background-color: rgba($color: $color-white, $alpha: .6);
+      background-color: rgba($color: $color-white, $alpha: 0.6);
       border-radius: 0.5rem;
       padding: 5rem 10rem 5rem 10rem;
       transform: skewX(-12deg);
+      // Media Start
+      @include respond(tab-port) {
+        max-width: 100rem;
+      }
+      @include respond(phone) {
+        max-width: 120rem;
+      }
+      // Media End
 
       &__shape {
         overflow: hidden;
@@ -32,6 +39,14 @@
         transform: translateX(-3rem) skewX(12deg);
         backface-visibility: hidden;
 
+        // Media Start
+        @include respond(tab-port) {
+          width: 10rem;
+          height: 10rem;
+        }
+        @include respond(phone) {
+        }
+        // Media End
         img {
           height: 100%;
           transform: translateX(-3rem) scale(1.4);
@@ -58,6 +73,15 @@
           font-size: 1.6rem;
           font-weight: 400;
           letter-spacing: 0.5px;
+          // Media Start
+          @include respond(tab-port) {
+          
+            font-size: 1.5rem;
+            
+          }
+          @include respond(phone) {
+          }
+          // Media End
         }
       }
       &:hover {
@@ -80,11 +104,11 @@
     width: 100%;
     z-index: -10;
     opacity: 0.15;
-    overflow: hidden  ;
+    overflow: hidden;
     .bg-content {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
 }

@@ -1,6 +1,5 @@
 import "./App.scss";
-import "./img/icon-font.css"
-
+import "./img/icon-font.css";
 
 import Header from "./components/header/header";
 import About from "./components/about/about";
@@ -9,17 +8,19 @@ import Tours from "./components/tours/tours";
 import Stories from "./components/stories/stories";
 import Booking from "./components/booking/booking";
 import Footer from "./components/footer/footer";
+import Navbar from "./components/navbar/navbar";
 
 function App() {
   return (
     <div className="App">
-     <Header/>
-     <About/>
-     <Features/>
-     <Tours/>
-     <Stories/>
-     <Booking/>
-     <Footer/>
+      <Navbar />
+      <Header />
+      <About />
+      <Features />
+      <Tours />
+      <Stories />
+      <Booking />
+      <Footer />
     </div>
   );
 }

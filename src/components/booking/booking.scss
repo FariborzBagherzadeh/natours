@@ -19,8 +19,7 @@
           ),
           url(../../img/nat-10.jpg);
         background-size: cover;
-        height: 50rem;
-        width: 80%;
+        max-width: 100rem;
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.2);
         &__form {
@@ -55,7 +54,7 @@
               border: none;
               border-bottom: 4px solid transparent;
               display: block;
-              width: 90%;
+              width: 100%;
               transition: all 0.3s;
               &::-webkit-input-placeholder {
                 color: #999;
@@ -84,9 +83,10 @@
               transition: all 0.3s;
             }
             &__radio-group {
-              width: 50%;
+              max-width: 100%;
               display: inline-block;
               margin-bottom: 2rem;
+              padding: 1rem 1rem;
             }
             &__radio-label {
               font-family: inherit;

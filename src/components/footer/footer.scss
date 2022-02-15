@@ -4,7 +4,10 @@
   background-color: #333;
   padding: 10rem 5rem;
   font-size: 1.4rem;
-
+  
+  @include respond(phone) {
+    font-size: 2rem;
+  }
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;

@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
-
 .section-features {
+
   padding: 20rem 0;
   background-image: linear-gradient(
       to right bottom,
@@ -10,7 +10,8 @@
     ),
     url(../../img/nat-4.jpg);
   background-size: cover;
-  margin-top: -10rem;
+  position: relative;
+  width: 100%;
   & > * {
     transform: skewY(7deg);
   }

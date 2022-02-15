@@ -2,15 +2,29 @@
 
 .section-about {
   background-color: $color-grey-light-1;
+
   padding: 25rem 5rem;
   margin-top: -20vh;
 
+  //Media start
+  @include respond(phone) {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  //Media End
   .section-about-grid {
     margin: 0 auto;
     width: 100%;
-    text-align: justify;
 
+    text-align: justify;
+    // Media Start
+    @include respond(phone) {
+      margin-left: -2rem;
+      margin-top: -12rem;
+    }
+    // Media End
     .paragraph {
+      display: inline-block;
       font-size: 1.6rem;
       letter-spacing: 0.7px;
 
@@ -26,12 +40,31 @@
         transform: scale(0.95);
         filter: blur(0.15rem);
       }
+
+      //Media Start
+      @include respond(tab-port) {
+        margin-top: 5rem;
+        max-width: 50rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 10rem;
+      }
+      @include respond(phone) {
+        z-index: 100;
+        padding-bottom: 60rem;
+      }
+      // Media End
       &__photo {
-        width: 55%;
+        max-width: 30rem;
         box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.4);
         position: absolute;
         transition: all 0.3s;
         outline-offset: 2rem;
+        // Media Start
+
+        @include respond(tab-port) {
+        }
+        // Media End
         &:hover {
           transform: scale(1.05) translateY(-0.8rem);
           box-shadow: 0 2.5rem 4rem rgba($color: #000000, $alpha: 0.5);
