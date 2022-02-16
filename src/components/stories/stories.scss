@@ -2,9 +2,14 @@
 
 .section-stories {
   padding: 5rem 15rem;
+  @include respond(sm-phone) {
+      padding: 5rem 0;
+  }
 
   position: relative;
   &__container {
+  
+
     &-item {
       padding-bottom: 10rem;
     }
@@ -30,8 +35,7 @@
         flex-direction: column;
         align-items: center;
         width: 40rem;
-        margin-left: -3rem;
-       
+
         transform: skewX(0deg);
       }
 
@@ -60,7 +64,6 @@
           transform: skewX(0deg);
           font-size: 2rem;
           margin-bottom: 3rem;
-        
         }
 
         // Media End

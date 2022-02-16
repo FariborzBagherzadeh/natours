@@ -2,6 +2,7 @@
 
 .section-book {
   padding: 15rem 0;
+  
   background-image: linear-gradient(
     to right bottom,
     $color-primary-light,
@@ -25,7 +26,9 @@
         &__form {
           width: 50%;
           padding: 5rem;
-      
+          @include respond(sm-phone) {
+            padding: 5rem 2rem;
+        }
           .form {
             .u-center-text {
               .heading-secondary-form {
