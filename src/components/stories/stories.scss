@@ -22,8 +22,19 @@
         max-width: 100rem;
       }
       @include respond(phone) {
-        max-width: 120rem;
+        max-width: 110rem;
       }
+      @include respond(sm-phone) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 40rem;
+        margin-left: -3rem;
+       
+        transform: skewX(0deg);
+      }
+
       // Media End
 
       &__shape {
@@ -44,8 +55,14 @@
           width: 10rem;
           height: 10rem;
         }
-        @include respond(phone) {
+        @include respond(sm-phone) {
+          display: block;
+          transform: skewX(0deg);
+          font-size: 2rem;
+          margin-bottom: 3rem;
+        
         }
+
         // Media End
         img {
           height: 100%;
@@ -68,6 +85,11 @@
       }
       &__text {
         transform: skewX(12deg);
+        @include respond(sm-phone) {
+          display: block;
+          transform: skewX(0deg);
+          font-size: 2rem;
+        }
 
         p {
           font-size: 1.6rem;
@@ -75,12 +97,9 @@
           letter-spacing: 0.5px;
           // Media Start
           @include respond(tab-port) {
-          
             font-size: 1.5rem;
-            
           }
-          @include respond(phone) {
-          }
+
           // Media End
         }
       }

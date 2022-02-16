@@ -153,6 +153,9 @@
     font-size: 1.6rem;
     border: none;
     cursor: pointer;
+    @include respond(sm-phone) {
+      max-width: 35rem;
+    }
   }
   &:hover {
     transform: translateY(-0.3rem);
@@ -170,6 +173,9 @@
     background-color: $color-white;
     color: $color-grey-dark;
     letter-spacing: 0.1rem;
+    @include respond(sm-phone) {
+      max-width:30rem;
+    }
     &::after {
       background-color: $color-white;
     }

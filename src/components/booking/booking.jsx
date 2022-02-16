@@ -78,7 +78,7 @@ function booking() {
                   </div>
                 </div>
                 <div className="form__group">
-                    <button className="btn btn--white"> Next Step &rarr;</button>
+                    <button className="btn btn--white"> Next Step</button>
                 </div>
               </form>
             </div>
